@@ -23,4 +23,9 @@ After downloading the repository:
 
 <img width="644" alt="Screenshot 2024-05-09 at 01 52 22" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/210422fd-74c1-4853-a7ec-38a10ba0225f">
 
+# Paramter comparison 
+The SC-VAR and S-VAR models exhibit several orders of magnitude fewer parameters compared to TIRSO and RFNL-TIRSO, as illustrated in the graph (Note that y-axis is in log scale).
+
+<img width="986" alt="Screenshot 2024-05-09 at 02 03 15" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/c83127ec-8047-4459-99fe-d0dcf712b839">
+
 
