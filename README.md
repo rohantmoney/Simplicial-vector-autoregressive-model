@@ -17,5 +17,5 @@ The experiment utilizes data generated through EPANET software for a real water 
 
 # Experiment A. Synthatic data
 After downloading the repository:
-Run the file 'Experiment_A_Synthatic_1.m'. This will enable you to compare the normalized mean squared error of SC-VAR with state-of-the-art competitors for time-varying. 
-Run the file 'Experiment_A_Synthatic_2.m'. This will enable you to compare the normalized mean squared error of SC-VAR with S-VAR for stationary model. 
+(1) Run the file 'Experiment_A_Synthatic_1.m': This will enable you to compare the normalized mean squared error of SC-VAR with state-of-the-art competitors for time-varying. 
+(2) Run the file 'Experiment_A_Synthatic_2.m': This will enable you to compare the normalized mean squared error of SC-VAR with S-VAR for stationary model. 
