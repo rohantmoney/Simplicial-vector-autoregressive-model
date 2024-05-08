@@ -1,3 +1,4 @@
+%% This code runs Experiment A. compariosn between SC-VAR aginest Benchmark algorithms for sythetic data
 clc; close all; clear all
  addpath SC_VAR/
  addpath Dependencies/
