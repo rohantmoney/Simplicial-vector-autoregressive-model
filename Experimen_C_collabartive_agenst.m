@@ -2,6 +2,7 @@
 addpath SC_VAR/
 addpath Dependencies/
 addpath Benchmark_slgorithms/
+addpath Football_data/
 % Tstep=1 and Tstep=6 are used in the paper.
 
 clc; clear all
