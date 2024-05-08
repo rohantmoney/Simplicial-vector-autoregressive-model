@@ -1,3 +1,4 @@
+%% This code runs Experiment A. compariosn between SC-VAR and S-VAR for sythetic data
 clc; close all; clear all
 
 
@@ -45,7 +46,7 @@ Hodge=Topology_Generator(param); %Generate SC structre
 for k=1:5 % loop to repeat experiment
 display(strcat("Experiment Num:",num2str(k)))
 % function Simplicial_Signal_Generator return synthtic data for node, edge and triangle signal
-   [signal_node,signal_edge,signal_tri]=Simplicial_Signal_Generator(Hodge,param);
+   [signal_node,signal_edge,signal_tri]=Simplicial_Signal_Generator_2(Hodge,param);
    [n_node,nT]=size(signal_node);
    [n_edge,nT]=size(signal_edge);
    [n_tri,nT]=size(signal_edge);
