@@ -1,4 +1,4 @@
-# Simplicial_vector_autoregressive_model
+<img width="644" alt="Screenshot 2024-05-09 at 01 52 22" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/309e3fb0-c418-477a-b1fe-a578ad1ce3ab"># Simplicial_vector_autoregressive_model
 In this study, we address the scalability challenge of the vector autoregressive (VAR) model in modeling dynamic processes with numerous time series by leveraging data relations as inductive priors. We propose two simplicial VAR models: one for modeling time series on a single simplicial level (e.g., edge flows) and another for jointly modeling multiple time series across different levels, capturing their spatio-temporal interdependencies. These models employ simplicial convolutional filters to effectively capture structure-aware dependencies in a multiresolution manner.  Through experiments on synthetic and real-world networks, including water distribution networks and collaborative agent scenarios, we demonstrate the effectiveness of our approach, achieving competitive signal modeling accuracy with significantly fewer parameters compared to state-of-the-art alternatives.
 
 # Experiment C. Collaborative agents
@@ -19,3 +19,8 @@ The experiment utilizes data generated through EPANET software for a real water 
 After downloading the repository:
 (1) Run the file 'Experiment_A_Synthatic_1.m': This will enable you to compare the normalized mean squared error of SC-VAR with state-of-the-art competitors for time-varying model. 
 (2) Run the file 'Experiment_A_Synthatic_2.m': This will enable you to compare the normalized mean squared error of SC-VAR with S-VAR for stationary model. 
+
+
+<img width="644" alt="Screenshot 2024-05-09 at 01 52 22" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/210422fd-74c1-4853-a7ec-38a10ba0225f">
+
+
