@@ -10,11 +10,11 @@ clc; clear all
 
 T=500; % Total length of time series
 P=6;   % P time lagged values are used to predict future
-Tstep=6; % use t-P:t-1 data to predict time series vaule at time t+6
+Tstep=6; % use t-P:t-1 data to predict time series vaule at time t+Tstep-1
 
 %% Intialize SC-VAR, S-VAR
 param.T=T; % Total length of time series
-param.Tstep=Tstep; % use t-P:t-1 data to predict time series vaule at time t+6
+param.Tstep=Tstep; % use t-P:t-1 data to predict time series vaule at time  t+Tstep-1
 param.P=P;   % P time lagged values are used to predict future
 scale=4; % scaling paramter for the simplicial convolution filters
 param.K0=scale*1; % filter order L_0 filter
@@ -148,12 +148,10 @@ plot(mean(nmse_node_SC,1),'black-','MarkerIndices',1:20:500,'LineWidth',3,'Displ
 
 % Plot SC-VAR estimate in black color
 hold on
-plot(mean(nmse_node_tirso,1)','b-.','MarkerIndices',1:20:500,'LineWidth',3,'DisplayName',strcat('SC-VAR :',num2str(Tstep),' step')) % Plot TIRSO estimate in blue color
-plot(mean(nmse_node_rfnltirso,1)','r.','MarkerIndices',1:5:500,'LineWidth',3,'DisplayName',strcat('SC-VAR :',num2str(Tstep),' step')) % Plot RFNL-TIRSO estimate in red color
-plot(mean(nmse_node_S,1)','c--','MarkerIndices',1:20:500,'LineWidth',3,'DisplayName',strcat('SC-VAR :',num2str(Tstep),' step')) % Plot S-VAR estimate in cyan color
+plot(mean(nmse_node_tirso,1)','b-.','MarkerIndices',1:20:500,'LineWidth',3,'DisplayName',strcat('TIRSO :',num2str(Tstep),' step')) % Plot TIRSO estimate in blue color
+plot(mean(nmse_node_rfnltirso,1)','r.','MarkerIndices',1:5:500,'LineWidth',3,'DisplayName',strcat('RFNL-TIRSO :',num2str(Tstep),' step')) % Plot RFNL-TIRSO estimate in red color
+plot(mean(nmse_node_S,1)','c--','MarkerIndices',1:20:500,'LineWidth',3,'DisplayName',strcat('S-VAR :',num2str(Tstep),' step')) % Plot S-VAR estimate in cyan color
 legend('show','FontSize', 18)
-%legend("SC-VAR ","TIRSO","RFNL-TIRSO","S-VAR",'FontSize', 18)
-%legend(sprintf('SC-VAR : %g step, TIRSO : %g step, RFNL-TIRSO : %g step, S-VAR : %g step', Tstep, Tstep,Tstep, Tstep),'FontSize', 18,'NumColumns',2);
 xlabel('t','FontSize', 18)
 ylabel('NMSE','FontSize', 18)
 grid on
