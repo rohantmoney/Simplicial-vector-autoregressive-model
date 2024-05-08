@@ -1,7 +1,7 @@
 %% Code for experiment C. Collabrative agents in the paper Simplicial vector autoregressive models
 addpath SC_VAR/
 addpath Dependencies/
-addpath Benchmark_slgorithms/
+addpath Benchmark_algorithms/
 addpath Football_data/
 % Tstep=1 and Tstep=6 are used in the paper.
 
