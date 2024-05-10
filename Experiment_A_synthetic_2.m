@@ -43,7 +43,7 @@ Hodge=Topology_Generator(param); %Generate SC structre
 
 
 
-for k=1:5 % loop to repeat experiment
+for k=1:100 % loop to repeat experiment
 display(strcat("Experiment Num:",num2str(k)))
 % function Simplicial_Signal_Generator return synthtic data for node, edge and triangle signal
    [signal_node,signal_edge,signal_tri]=Simplicial_Signal_Generator_2(Hodge,param);
@@ -108,8 +108,6 @@ hold on
 plot(mean(nmse_edge_S,1)','b-.o','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('S-VAR :',num2str(Tstep),' step')) % Plot S-VAR estimate in blue color
 
 legend('show','FontSize', 18)
-%legend("SC-VAR ","TIRSO","RFNL-TIRSO","S-VAR",'FontSize', 18)
-%legend(sprintf('SC-VAR : %g step, TIRSO : %g step, RFNL-TIRSO : %g step, S-VAR : %g step', Tstep, Tstep,Tstep, Tstep),'FontSize', 18,'NumColumns',2);
 xlabel('t','FontSize', 18)
 ylabel('NMSE','FontSize', 18)
 grid on
@@ -123,8 +121,6 @@ title('Triangle signal')
 hold on
 plot(mean(nmse_tri_S,1)','b-.>','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('S-VAR :',num2str(Tstep),' step')) % Plot S-VAR estimate in blue color
 legend('show','FontSize', 18)
-%legend("SC-VAR ","TIRSO","RFNL-TIRSO","S-VAR",'FontSize', 18)
-%legend(sprintf('SC-VAR : %g step, TIRSO : %g step, RFNL-TIRSO : %g step, S-VAR : %g step', Tstep, Tstep,Tstep, Tstep),'FontSize', 18,'NumColumns',2);
 xlabel('t','FontSize', 18)
 ylabel('NMSE','FontSize', 18)
 grid on
