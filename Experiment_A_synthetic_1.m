@@ -47,10 +47,11 @@ Hodge=Topology_Generator(param); %Generate SC structre
 
 
 
-for k=1:10 % loop to repeat experiment
+for k=1:25 % loop to repeat experiment
 display(strcat("Experiment Num:",num2str(k)))
 % function Simplicial_Signal_Generator return synthtic data for node, edge and triangle signal
    [signal_node,signal_edge,signal_tri]=Simplicial_Signal_Generator(Hodge,param);
+   
    [n_node,nT]=size(signal_node);
    [n_edge,nT]=size(signal_edge);
    [n_tri,nT]=size(signal_edge);
@@ -61,6 +62,8 @@ if 1
 param.V_En=1;
 param.F_En=1;
 param.T_En=1;
+
+
 %SC_VAR function return the NMSE for triangle, edge and vertex signals
 [nmse_node_SC(k,:),nmse_edge_SC(k,:),nmse_tri_SC(k,:)]=SC_VAR(signal_node,signal_edge,signal_tri,Hodge,param);
 
@@ -95,7 +98,7 @@ time_tirso=toc;
  nmse_edge_tirso(k,:)=mean(CompNMSE(signal_edge,m_prediction(n_node+1:n_node+n_edge,1:end-1)));
  nmse_triangle_tirso(k,:)=mean(CompNMSE(signal_tri,m_prediction(n_node+n_edge+1:end,1:end-1)));
  %%%%%%%%%%%%%%%%RF_NLtiso%%%%%%%%%%%%%%%%
- addpath '/Users/rohanmoney/git_rohan/NonLinearTISO'
+
 
 RFObj = RF_nltirso; % set tirso object up
 RFObj.noOfNodes = n_row_mx;
@@ -149,8 +152,7 @@ plot(mean(nmse_node_tirso,1)','b-.*','MarkerIndices',1:50:2000,'MarkerSize',15,'
 plot(mean(nmse_node_rfnltirso,1)','R:*','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('RFNL-TIRSO :',num2str(Tstep),' step')) % Plot RFNL-TIRSO estimate in red color
 plot(mean(nmse_node_mav,1)','y*','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('Moving average :',num2str(Tstep),' step')) % Plot S-VAR estimate in yellow color
 legend('show','FontSize', 18)
-%legend("SC-VAR ","TIRSO","RFNL-TIRSO","S-VAR",'FontSize', 18)
-%legend(sprintf('SC-VAR : %g step, TIRSO : %g step, RFNL-TIRSO : %g step, S-VAR : %g step', Tstep, Tstep,Tstep, Tstep),'FontSize', 18,'NumColumns',2);
+
 xlabel('t','FontSize', 18)
 ylabel('NMSE','FontSize', 18)
 grid on
@@ -164,8 +166,7 @@ plot(mean(nmse_edge_tirso,1)','b-.o','MarkerIndices',1:50:2000,'MarkerSize',15,'
 plot(mean(nmse_edge_rfnltirso,1)','r:o','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('RFNL-TIRSO :',num2str(Tstep),' step')) % Plot RFNL-TIRSO estimate in red color
 plot(mean(nmse_edge_mav,1)','yo','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('Moving average :',num2str(Tstep),' step')) % Plot S-VAR estimate in yellow color
 legend('show','FontSize', 18)
-%legend("SC-VAR ","TIRSO","RFNL-TIRSO","S-VAR",'FontSize', 18)
-%legend(sprintf('SC-VAR : %g step, TIRSO : %g step, RFNL-TIRSO : %g step, S-VAR : %g step', Tstep, Tstep,Tstep, Tstep),'FontSize', 18,'NumColumns',2);
+
 xlabel('t','FontSize', 18)
 ylabel('NMSE','FontSize', 18)
 grid on
@@ -181,8 +182,6 @@ plot(mean(nmse_triangle_tirso,1)','b-.>','MarkerIndices',1:50:2000,'MarkerSize',
 plot(mean(nmse_triangle_rfnltirso,1)','R:>','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('RFNL-TIRSO :',num2str(Tstep),' step')) % Plot RFNL-TIRSO estimate in red color
 plot(mean(nmse_triangle_mav,1)','y>','MarkerIndices',1:50:2000,'MarkerSize',15,'LineWidth',3,'DisplayName',strcat('Moving average :',num2str(Tstep),' step')) % Plot S-VAR estimate in yellow color
 legend('show','FontSize', 18)
-%legend("SC-VAR ","TIRSO","RFNL-TIRSO","S-VAR",'FontSize', 18)
-%legend(sprintf('SC-VAR : %g step, TIRSO : %g step, RFNL-TIRSO : %g step, S-VAR : %g step', Tstep, Tstep,Tstep, Tstep),'FontSize', 18,'NumColumns',2);
 xlabel('t','FontSize', 18)
 ylabel('NMSE','FontSize', 18)
 grid on
