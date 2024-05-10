@@ -14,7 +14,8 @@ After downloading the repository, run the file 'Experiment_B_Cherryhill.m'. This
 
 The experiment utilizes data generated through EPANET software for a real water distribution network. The network's structure is given, with vertex signal representing pressure and edge signal indicating flow rate.
 
-<img width="886" alt="Screenshot 2024-05-08 at 22 52 19" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/1c8c7c6c-3f76-4411-86d7-1ea2088c8e94">
+<img width="841" alt="Screenshot 2024-05-08 at 22 52 19" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/58653726-dd2a-4913-aae6-358fe0672f00">
+
 
 # Experiment A. Synthatic data
 After downloading the repository:
