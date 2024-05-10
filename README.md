@@ -29,3 +29,6 @@ The SC-VAR and S-VAR models exhibit several orders of magnitude fewer parameters
 <img width="986" alt="Screenshot 2024-05-09 at 02 03 15" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/c83127ec-8047-4459-99fe-d0dcf712b839">
 
 
+
+
+The MATLAB 2019b is employed to produce results for the experiments.
