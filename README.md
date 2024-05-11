@@ -6,7 +6,8 @@ After downloading the repository, run the file 'Experiment_C_collaborative_agent
 
 The experiment utilizes real dataset from https://datasets.simula.no/alfheim/, containing time-varying positional data of football players. This data is utilized to construct a simplicial complex (SC), where the average position of players is calculated, and the SC is constructed based on the distances between these average positions.In this experiment, the vertex signal represents speed, the edge signal corresponds to distance, and the triangle signal signifies area.
 
-<img width="913" alt="Screenshot 2024-05-10 at 20 03 38" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/36ddf55b-f030-43ca-867d-4bedb6e96718">
+
+<img width="952" alt="Screenshot 2024-05-11 at 22 53 13" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/6b61c52e-5a09-4673-be97-5878de7a02eb">
 
 
 # Experiment B. Water distribution network
