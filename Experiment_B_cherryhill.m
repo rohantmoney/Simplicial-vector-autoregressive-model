@@ -119,7 +119,7 @@ time_tirso=toc;
  nmse_node_tirso(k,:)=mean(CompNMSE(signal_node,m_prediction(1:n_node,1:end-Tstep)));
  nmse_edge_tirso(k,:)=mean(CompNMSE(signal_edge,m_prediction(n_node+1:n_node+n_edge,1:end-Tstep)));
 %%%%%%%%%%%%%%RFNL-TIRSO%%%%%%%%%%%%%%%%
- addpath '/Users/rohanmoney/git_rohan/NonLinearTISO'
+
 
 RFObj = RF_nltirso; % set tirso object up
 RFObj.noOfNodes = n_row_mx;
