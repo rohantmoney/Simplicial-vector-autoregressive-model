@@ -49,7 +49,7 @@ N1=Hodge.N1; %Number of edges
 N2=Hodge.N2; %Number of triangles 
 
 % Initialize bias
-bias=1
+bias=1;
 if bias ==1
     bias_V=1*ones(N0,1);
     bias_F=1*ones(N1,1);
