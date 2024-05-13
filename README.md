@@ -20,8 +20,8 @@ The experiment utilizes data generated through EPANET software for a real water 
 
 # Experiment A. Synthetic data
 After downloading the repository:
-(1) Run the file 'Experiment_A_Synthetic_1.m': This will enable you to compare the normalized mean squared error of SC-VAR with state-of-the-art competitors for time-varying data generation model. 
-(2) Run the file 'Experiment_A_Synthetic_2.m': This will enable you to compare the normalized mean squared error of SC-VAR with S-VAR for stationary data generation model. 
+(1) Run the file 'Experiment_A_Synthatic_1.m': This will enable you to compare the normalized mean squared error of SC-VAR with state-of-the-art competitors for time-varying data generation model. 
+(2) Run the file 'Experiment_A_Synthatic_2.m': This will enable you to compare the normalized mean squared error of SC-VAR with S-VAR for stationary data generation model. 
 
 
 <img width="644" alt="Screenshot 2024-05-09 at 01 52 22" src="https://github.com/rohantmoney/Simplicial-vector-autoregressive-model/assets/61416415/210422fd-74c1-4853-a7ec-38a10ba0225f">
