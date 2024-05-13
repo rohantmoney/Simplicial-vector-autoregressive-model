@@ -1,4 +1,4 @@
-This repository contains the code for the experiments outlined in the paper  " Simplicial_vector_autoregressive_models" .
+This repository contains the code for the experiments outlined in the paper  " Simplicial vector autoregressive models" .
 https://www.techrxiv.org/users/779840/articles/921287-simplicial-vector-autoregressive-models
 
 # Simplicial_vector_autoregressive_model
