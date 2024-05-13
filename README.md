@@ -34,4 +34,4 @@ The SC-VAR and S-VAR models exhibit several orders of magnitude fewer parameters
 
 
 
-    **************************** The MATLAB 2019b is employed to produce results for the experiments *******************************
+    ****************** The MATLAB 2019b is employed to produce results for the experiments ********************
